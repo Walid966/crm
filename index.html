@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إرسال الشكاوي</title>
+    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>إرسال الشكاوي</h1>
+        <form id="complaintForm">
+            <label for="supervisorAccount">رقم حساب المشرف:</label>
+            <select id="supervisorAccount" name="supervisorAccount" required>
+                <option value="" selected>اختر رقم حساب المشرف</option>
+                <!-- سيتم تعبئة هذه القائمة بالخيارات باستخدام JavaScript -->
+            </select><br><br>
+
+            <label for="supervisorName">اسم المشرف:</label>
+            <input type="text" id="supervisorName" name="supervisorName" readonly><br><br>
+
+            <label for="representativeAccount">رقم حساب المندوب:</label>
+            <select id="representativeAccount" name="representativeAccount" required disabled>
+                <option value="" selected>اختر رقم حساب المندوب</option>
+                <!-- سيتم تعبئة هذه القائمة بالخيارات باستخدام JavaScript -->
+            </select><br><br>
+
+            <label for="representativeName">اسم المندوب:</label>
+            <input type="text" id="representativeName" name="representativeName" readonly><br><br>
+
+            <label for="serviceType">نوع الخدمة:</label>
+            <select id="serviceType" name="serviceType" required>
+                <option value="" selected>اختر نوع الخدمة</option>
+                <!-- سيتم تعبئة هذه القائمة بالخيارات باستخدام JavaScript -->
+            </select><br><br>
+
+            <label for="subService">الخدمة الفرعية:</label>
+            <select id="subService" name="subService" required disabled>
+                <option value="" selected>اختر الخدمة الفرعية</option>
+                <!-- سيتم تعبئة هذه القائمة بالخيارات باستخدام JavaScript -->
+            </select><br><br>
+
+            <label for="traderAccount">رقم حساب التاجر:</label>
+            <input type="number" id="traderAccount" name="traderAccount" required min="0" oninput="this.value = this.value.replace(/[^0-9]/g, '');"><br><br>
+
+            <label for="operationNumber">رقم العملية:</label>
+            <input type="number" id="operationNumber" name="operationNumber" required min="0" oninput="this.value = this.value.replace(/[^0-9]/g, '');"><br><br>
+
+            <label for="receiptImage">صورة ايصال:</label>
+            <input type="file" id="receiptImage" name="receiptImage" accept="image/*" required><br><br>
+
+            <label for="note">ملاحظة:</label>
+            <textarea id="note" name="note"></textarea><br><br>
+
+            <button type="submit">إرسال الشكوى</button>
+        </form>
+
+        <h2>الردود المستلمة</h2>
+        <div id="receivedReplies"></div>
+    </div>
+
+    <script src="send_complaints.js"></script>
+</body>
+</html>

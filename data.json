@@ -1,0 +1,12 @@
+{
+    "supervisors": [
+        { "accountNumber": "1019", "name": "محمد ناصر", "representatives": ["3207", "10517"] },
+        { "accountNumber": "15738", "name": "محمد بدوي", "representatives": ["17942", "4077"] }
+    ],
+    "representatives": [
+        { "accountNumber": "3207", "name": "مصطفي رجب" },
+        { "accountNumber": "10517", "name": "احمد كامل" },
+        { "accountNumber": "17942", "name": "محمد جمال" },
+        { "accountNumber": "4077", "name": "شريف سمير" }
+    ]
+}
